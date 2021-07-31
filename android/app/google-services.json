@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "553575829500",
+    "project_id": "chatapp-kuldii",
+    "storage_bucket": "chatapp-kuldii.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553575829500:android:f6e42ed9f5053ff206ac79",
+        "android_client_info": {
+          "package_name": "com.kuldiiproject.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553575829500-12g9l46cvll2t3tkvg9fq6n7ahchsbjb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kuldiiproject.chatapp",
+            "certificate_hash": "0851faa6b4a535bfb6bfb4b20904f4c717d1f563"
+          }
+        },
+        {
+          "client_id": "553575829500-4jebogim9gln62qorpee55qv78kmdhk1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvHLmfgsgt7Ionc8roX5jRdVNmu4c254k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553575829500-4jebogim9gln62qorpee55qv78kmdhk1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

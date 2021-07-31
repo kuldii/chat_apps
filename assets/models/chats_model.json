@@ -1,0 +1,28 @@
+{
+    "connections": [
+        "sandikha.rahardi@gmail.com",
+        "fitriani@gmail.com"
+    ],
+    "total_chats": 10,
+    "total_read": 8,
+    "total_unread": 2,
+    "chat": [
+        {
+            "pengirim": "sandikha.rahardi@gmail.com",
+            "penerima": "fitriani@gmail.com",
+            "pesan": "Halo fit, apa kabar ?",
+            "time": "2021-08-25T13:28:59.748721",
+            "isRead":true
+        },
+        {
+            "pengirim": "fitriani@gmail.com",
+            "penerima": "sandikha.rahardi@gmail.com",
+            "pesan": "Baik dika, kamu sendiri gimana ?",
+            "time": "2021-08-25T13:29:02.748721",
+            "isRead":false
+        }
+    ],
+    "lastTime": "2021-08-25T13:29:02.748721"
+}
+
+
