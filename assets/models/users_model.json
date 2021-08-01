@@ -12,12 +12,14 @@
         {
             "connection": "fitriani@gmail.com",
             "chat_id": "RO337DaJnITOcfDgo2ENh8IPanVs",
-            "lastTime": "2021-08-25T13:29:02.748721"
+            "lastTime": "2021-08-25T13:29:02.748721",
+            "total_unread": 0
         },
         {
             "connection": "daniel@gmail.com",
             "chat_id": "JnITOcfDgo2ENh8IPanVsRO337Da",
-            "lastTime": "2021-09-25T13:28:59.748721"
+            "lastTime": "2021-09-25T13:28:59.748721",
+            "total_unread": 0
         }
     ]
 }

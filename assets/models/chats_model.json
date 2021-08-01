@@ -3,9 +3,6 @@
         "sandikha.rahardi@gmail.com",
         "fitriani@gmail.com"
     ],
-    "total_chats": 10,
-    "total_read": 8,
-    "total_unread": 2,
     "chat": [
         {
             "pengirim": "sandikha.rahardi@gmail.com",
@@ -21,8 +18,5 @@
             "time": "2021-08-25T13:29:02.748721",
             "isRead":false
         }
-    ],
-    "lastTime": "2021-08-25T13:29:02.748721"
+    ]
 }
-
-
