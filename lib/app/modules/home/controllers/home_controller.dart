@@ -7,4 +7,8 @@ class HomeController extends GetxController {
   Stream<DocumentSnapshot<Map<String, dynamic>>> chatsStream(String email) {
     return firestore.collection('users').doc(email).snapshots();
   }
+
+  Stream<DocumentSnapshot<Map<String, dynamic>>> friendStream(String email) {
+    return firestore.collection('users').doc(email).snapshots();
+  }
 }
