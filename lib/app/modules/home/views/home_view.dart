@@ -80,7 +80,14 @@ class HomeView extends GetView<HomeController> {
                                       horizontal: 20,
                                       vertical: 5,
                                     ),
-                                    onTap: () => Get.toNamed(Routes.CHAT_ROOM),
+                                    onTap: () => Get.toNamed(
+                                      Routes.CHAT_ROOM,
+                                      arguments: {
+                                        "chat_id": "${listDocsChats[index].id}",
+                                        "friendEmail": listDocsChats[index]
+                                            ["connection"],
+                                      },
+                                    ),
                                     leading: CircleAvatar(
                                       radius: 30,
                                       backgroundColor: Colors.black26,
@@ -123,7 +130,14 @@ class HomeView extends GetView<HomeController> {
                                       horizontal: 20,
                                       vertical: 5,
                                     ),
-                                    onTap: () => Get.toNamed(Routes.CHAT_ROOM),
+                                    onTap: () => Get.toNamed(
+                                      Routes.CHAT_ROOM,
+                                      arguments: {
+                                        "chat_id": "${listDocsChats[index].id}",
+                                        "friendEmail": listDocsChats[index]
+                                            ["connection"],
+                                      },
+                                    ),
                                     leading: CircleAvatar(
                                       radius: 30,
                                       backgroundColor: Colors.black26,
