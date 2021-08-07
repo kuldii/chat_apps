@@ -431,6 +431,27 @@ class AuthController extends GetxController {
 
     print(chat_id);
 
+    final updateStatusChat = await chats
+        .doc(chat_id)
+        .collection("chat")
+        .where("isRead", isEqualTo: false)
+        .where("penerima", isEqualTo: _currentUser!.email)
+        .get();
+
+    updateStatusChat.docs.forEach((element) async {
+      await chats
+          .doc(chat_id)
+          .collection("chat")
+          .doc(element.id)
+          .update({"isRead": true});
+    });
+
+    await users
+        .doc(_currentUser!.email)
+        .collection("chats")
+        .doc(chat_id)
+        .update({"total_unread": 0});
+
     Get.toNamed(
       Routes.CHAT_ROOM,
       arguments: {

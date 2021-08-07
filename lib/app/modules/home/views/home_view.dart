@@ -80,13 +80,10 @@ class HomeView extends GetView<HomeController> {
                                       horizontal: 20,
                                       vertical: 5,
                                     ),
-                                    onTap: () => Get.toNamed(
-                                      Routes.CHAT_ROOM,
-                                      arguments: {
-                                        "chat_id": "${listDocsChats[index].id}",
-                                        "friendEmail": listDocsChats[index]
-                                            ["connection"],
-                                      },
+                                    onTap: () => controller.goToChatRoom(
+                                      "${listDocsChats[index].id}",
+                                      authC.user.value.email!,
+                                      listDocsChats[index]["connection"],
                                     ),
                                     leading: CircleAvatar(
                                       radius: 30,
@@ -130,13 +127,10 @@ class HomeView extends GetView<HomeController> {
                                       horizontal: 20,
                                       vertical: 5,
                                     ),
-                                    onTap: () => Get.toNamed(
-                                      Routes.CHAT_ROOM,
-                                      arguments: {
-                                        "chat_id": "${listDocsChats[index].id}",
-                                        "friendEmail": listDocsChats[index]
-                                            ["connection"],
-                                      },
+                                    onTap: () => controller.goToChatRoom(
+                                      "${listDocsChats[index].id}",
+                                      authC.user.value.email!,
+                                      listDocsChats[index]["connection"],
                                     ),
                                     leading: CircleAvatar(
                                       radius: 30,
