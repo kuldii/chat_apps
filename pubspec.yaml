@@ -18,6 +18,7 @@ dependencies:
   emoji_picker_flutter: 1.0.6
   get_storage: 2.0.3
   intl: 0.17.0
+  image_picker: 0.8.3+2
   flutter: 
     sdk: flutter
 
