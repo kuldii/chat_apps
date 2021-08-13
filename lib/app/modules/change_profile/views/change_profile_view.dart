@@ -147,6 +147,7 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
                   GetBuilder<ChangeProfileController>(
                     builder: (c) => c.pickedImage != null
                         ? Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
                                 height: 110,
@@ -182,7 +183,13 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
                                 ),
                               ),
                               TextButton(
-                                onPressed: () {},
+                                onPressed: () => c
+                                    .uploadImage(authC.user.value.uid!)
+                                    .then((hasilKembalian) {
+                                  if (hasilKembalian != null) {
+                                    authC.updatePhotoUrl(hasilKembalian);
+                                  }
+                                }),
                                 child: Text(
                                   "upload",
                                   style: TextStyle(

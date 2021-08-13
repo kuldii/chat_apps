@@ -283,6 +283,26 @@ class AuthController extends GetxController {
     Get.defaultDialog(title: "Success", middleText: "Update status success");
   }
 
+  void updatePhotoUrl(String url) async {
+    String date = DateTime.now().toIso8601String();
+    // Update firebase
+    CollectionReference users = firestore.collection('users');
+
+    await users.doc(_currentUser!.email).update({
+      "photoUrl": url,
+      "updatedTime": date,
+    });
+
+    // Update model
+    user.update((user) {
+      user!.photoUrl = url;
+      user.updatedTime = date;
+    });
+
+    user.refresh();
+    Get.defaultDialog(
+        title: "Success", middleText: "Change photo profile success");
+  }
   // SEARCH
 
   void addNewConnection(String friendEmail) async {
