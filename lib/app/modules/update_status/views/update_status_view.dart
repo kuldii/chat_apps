@@ -14,10 +14,10 @@ class UpdateStatusView extends GetView<UpdateStatusController> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () => Get.back(),
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back,  color: Colors.white,),
         ),
         backgroundColor: Colors.red[900],
-        title: Text('Update Status'),
+        title: Text('Update Status', style: TextStyle(color: Colors.white,),),
         centerTitle: true,
       ),
       body: Padding(
@@ -34,7 +34,7 @@ class UpdateStatusView extends GetView<UpdateStatusController> {
               decoration: InputDecoration(
                 labelText: "Status",
                 labelStyle: TextStyle(
-                  color: Colors.black,
+                  color: Get.isDarkMode ? Colors.white : Colors.black,
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(100),

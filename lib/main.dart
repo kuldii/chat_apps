@@ -28,6 +28,12 @@ class MyApp extends StatelessWidget {
           return Obx(
             () => GetMaterialApp(
               title: "ChatApp",
+              theme: ThemeData(
+                brightness: Brightness.light,
+                primaryColor: Colors.white,
+                accentColor: Colors.black,
+                buttonColor: Colors.red[900],
+              ),
               initialRoute: authC.isSkipIntro.isTrue
                   ? authC.isAuth.isTrue
                       ? Routes.HOME

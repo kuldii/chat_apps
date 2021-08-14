@@ -9,9 +9,24 @@ import '../controllers/home_controller.dart';
 class HomeView extends GetView<HomeController> {
   final authC = Get.find<AuthController>();
 
+  final ThemeData light = ThemeData(
+    brightness: Brightness.light,
+    primaryColor: Colors.white,
+    accentColor: Colors.black,
+    buttonColor: Colors.red[900],
+  );
+
+  final ThemeData dark = ThemeData(
+    brightness: Brightness.dark,
+    primaryColor: Color(0xFF686D76),
+    accentColor: Colors.white,
+    buttonColor: Colors.red[900],
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Get.theme.primaryColor,
       body: Column(
         children: [
           Material(
@@ -198,6 +213,7 @@ class HomeView extends GetView<HomeController> {
         child: Icon(
           Icons.search,
           size: 30,
+          color: Colors.white,
         ),
         backgroundColor: Colors.red[900],
       ),

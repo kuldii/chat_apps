@@ -20,10 +20,18 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () => Get.back(),
-          icon: Icon(Icons.arrow_back),
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
         ),
         backgroundColor: Colors.red[900],
-        title: Text('Change Profile'),
+        title: Text(
+          'Change Profile',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
         centerTitle: true,
         actions: [
           IconButton(
@@ -74,7 +82,7 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
               decoration: InputDecoration(
                 labelText: "Email",
                 labelStyle: TextStyle(
-                  color: Colors.black,
+                  color: Get.isDarkMode ? Colors.white : Colors.black,
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(100),
@@ -96,7 +104,7 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
               decoration: InputDecoration(
                 labelText: "Name",
                 labelStyle: TextStyle(
-                  color: Colors.black,
+                  color: Get.isDarkMode ? Colors.white : Colors.black,
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(100),
@@ -124,7 +132,7 @@ class ChangeProfileView extends GetView<ChangeProfileController> {
               decoration: InputDecoration(
                 labelText: "Status",
                 labelStyle: TextStyle(
-                  color: Colors.black,
+                  color: Get.isDarkMode ? Colors.white : Colors.black,
                 ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(100),

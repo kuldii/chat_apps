@@ -8,18 +8,33 @@ import '../../../controllers/auth_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
   final authC = Get.find<AuthController>();
+
+  final ThemeData light = ThemeData(
+    brightness: Brightness.light,
+    primaryColor: Colors.white,
+    accentColor: Colors.black,
+    buttonColor: Colors.red[900],
+  );
+
+  final ThemeData dark = ThemeData(
+    brightness: Brightness.dark,
+    primaryColor: Color(0xFF686D76),
+    accentColor: Colors.white,
+    buttonColor: Colors.red[900],
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Get.theme.primaryColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Get.isDarkMode ? Color(0xFF373A40) : Colors.white,
         leading: IconButton(
           onPressed: () => Get.back(),
           icon: Icon(
             Icons.arrow_back,
-            color: Colors.black,
+            color: Get.theme.accentColor,
           ),
         ),
         actions: [
@@ -27,7 +42,7 @@ class ProfileView extends GetView<ProfileController> {
             onPressed: () => authC.logout(),
             icon: Icon(
               Icons.logout,
-              color: Colors.black,
+              color: Get.theme.accentColor,
             ),
           ),
         ],
@@ -109,7 +124,7 @@ class ProfileView extends GetView<ProfileController> {
                     trailing: Icon(Icons.arrow_right),
                   ),
                   ListTile(
-                    onTap: () {},
+                    onTap: () => Get.changeTheme(Get.isDarkMode ? light : dark),
                     leading: Icon(Icons.color_lens),
                     title: Text(
                       "Change Theme",
@@ -117,7 +132,7 @@ class ProfileView extends GetView<ProfileController> {
                         fontSize: 22,
                       ),
                     ),
-                    trailing: Text("Light"),
+                    trailing: Text(Get.isDarkMode ? "Dark" : "Light"),
                   ),
                 ],
               ),
@@ -131,11 +146,15 @@ class ProfileView extends GetView<ProfileController> {
               children: [
                 Text(
                   "Chat App",
-                  style: TextStyle(color: Colors.black54),
+                  style: TextStyle(
+                    color: Get.isDarkMode ? Colors.white54 : Colors.black54,
+                  ),
                 ),
                 Text(
                   "v.1.0",
-                  style: TextStyle(color: Colors.black54),
+                  style: TextStyle(
+                    color: Get.isDarkMode ? Colors.white54 : Colors.black54,
+                  ),
                 ),
               ],
             ),

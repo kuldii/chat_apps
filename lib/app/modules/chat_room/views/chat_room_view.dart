@@ -25,7 +25,10 @@ class ChatRoomView extends GetView<ChatRoomController> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(width: 5),
-              Icon(Icons.arrow_back),
+              Icon(
+                Icons.arrow_back,
+                color: Colors.white,
+              ),
               SizedBox(width: 5),
               CircleAvatar(
                 radius: 25,
@@ -85,12 +88,14 @@ class ChatRoomView extends GetView<ChatRoomController> {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
+                      color: Colors.white,
                     ),
                   ),
                   Text(
                     dataFriend["status"],
                     style: TextStyle(
                       fontSize: 14,
+                      color: Colors.white,
                     ),
                   ),
                 ],
